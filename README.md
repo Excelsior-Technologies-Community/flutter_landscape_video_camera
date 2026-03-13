@@ -1,27 +1,27 @@
 ## 🎯 flutter_landscape_video_camera
-```
+
 flutter_landscape_video_camera is a reusable Flutter landscape video recording camera library that provides a ready-to-use full-screen camera UI with recording timer, zoom gesture, flash control and camera switching.
 
 It helps developers quickly integrate video recording functionality without writing complex camera setup, permission handling or orientation management logic.
 
 You can directly open a landscape camera screen and start recording videos inside any Flutter application.
-```
+
 
 ---
 
 ## ✨ Feature Preview
-```
-* 📱 Fullscreen landscape camera preview
-* 🔐 Automatic camera & microphone permission handling
-* 🔄 Front / Back camera switching
-* 🔴 Video recording with live timer
-* 🔍 Pinch to zoom gesture
-* ⚡ Flash ON / OFF toggle
-* 📂 Video file path callback
-* 🔁 Reusable camera screen
-* 🧱 Clean architecture (Controller + Widgets + Utils)
-* 📦 Easy integration in any Flutter project
-```
+
+📱 Fullscreen landscape camera preview
+🔐 Automatic camera & microphone permission handling
+🔄 Front / Back camera switching
+🔴 Video recording with live timer
+🔍 Pinch to zoom gesture
+⚡ Flash ON / OFF toggle
+📂 Video file path callback
+🔁 Reusable camera screen
+🧱 Clean architecture (Controller + Widgets + Utils)
+📦 Easy integration in any Flutter project
+
 ---
 
 
