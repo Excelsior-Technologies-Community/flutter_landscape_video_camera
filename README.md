@@ -40,13 +40,12 @@ Then run:
 flutter pub get
 ```
 
----
+--------------------
 
 ## 🎬 Preview
 
 
-
----
+------------------
 
 ## 🗂 File Structure
 
