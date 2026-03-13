@@ -44,7 +44,10 @@ flutter pub get
 
 ## 🎬 Preview
 
+```
+file:///D:/Documents/Documents/Downloads/lansscape_video_camera.mp4
 
+```
 ------------------
 
 ## 🗂 File Structure
