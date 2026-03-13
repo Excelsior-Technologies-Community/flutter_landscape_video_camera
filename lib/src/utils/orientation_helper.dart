@@ -1,0 +1,17 @@
+import 'package:flutter/services.dart';
+
+class OrientationHelper {
+
+  static Future<void> setLandscape() async {
+    await SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+    ]);
+  }
+
+  static Future<void> setPortrait() async {
+    await SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+  }
+}
