@@ -31,7 +31,7 @@ Add dependency in your **pubspec.yaml**
 ```
 dependencies:
   flutter_landscape_video_camera:
-    path: ../flutter_landscape_video_camera
+    path: https://github.com/shahpalsha/flutter_landscape_video_camera/tree/stage
 ```
 
 Then run:
