@@ -11,16 +11,16 @@ You can directly open a landscape camera screen and start recording videos insid
 
 ## ✨ Feature Preview
 
--📱 Fullscreen landscape camera preview
--🔐 Automatic camera & microphone permission handling
- 🔄 Front / Back camera switching
-🔴 Video recording with live timer
-🔍 Pinch to zoom gesture
-⚡ Flash ON / OFF toggle
-📂 Video file path callback
-🔁 Reusable camera screen
-🧱 Clean architecture (Controller + Widgets + Utils)
-📦 Easy integration in any Flutter project
+- 📱 Fullscreen landscape camera preview
+- 🔐 Automatic camera & microphone permission handling
+- 🔄 Front / Back camera switching
+- 🔴 Video recording with live timer
+- 🔍 Pinch to zoom gesture
+- ⚡ Flash ON / OFF toggle
+- 📂 Video file path callback
+- 🔁 Reusable camera screen
+- 🧱 Clean architecture (Controller + Widgets + Utils)
+- 📦 Easy integration in any Flutter project
 
 ---
 
