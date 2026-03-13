@@ -1,149 +1,185 @@
-# 🎥 flutter_landscape_video_camera
-'''
-A reusable Flutter library that provides a **ready-to-use Landscape Video Recording Camera Screen** with timer, zoom gesture, flash control and camera switching.
+## 🎯 flutter_landscape_video_camera
+```
+flutter_landscape_video_camera is a reusable Flutter **landscape video recording camera library** that provides a ready-to-use full-screen camera UI with recording timer, zoom gesture, flash control and camera switching.
 
-This library helps developers integrate **video recording functionality quickly** without writing complex camera logic.
-'''
---------------------
+It helps developers quickly integrate **video recording functionality** without writing complex camera setup, permission handling or orientation management logic.
 
-## 🚀 Library Introduction
-'''
-`flutter_landscape_video_camera` is a clean architecture based camera module.
-'''
-It automatically:
-'''
-✅ Locks device orientation to landscape
-✅ Requests camera & microphone permissions
-✅ Shows fullscreen camera preview
-✅ Supports video recording with timer
-✅ Supports pinch to zoom gesture
-✅ Supports flash toggle
-✅ Allows switching front / back camera
-✅ Returns recorded video file path
-'''
+You can directly open a **landscape camera screen** and start recording videos inside any Flutter application.
+```
 
-------------------------
+---
 
-## Preview:
+## ✨ Feature Preview
+```
+* 📱 Fullscreen landscape camera preview
+* 🔐 Automatic camera & microphone permission handling
+* 🔄 Front / Back camera switching
+* 🔴 Video recording with live timer
+* 🔍 Pinch to zoom gesture
+* ⚡ Flash ON / OFF toggle
+* 📂 Video file path callback
+* 🔁 Reusable camera screen
+* 🧱 Clean architecture (Controller + Widgets + Utils)
+* 📦 Easy integration in any Flutter project
+```
+---
 
 
+## 📦 Installation
+
+Add dependency in your **pubspec.yaml**
+```
+dependencies:
+  flutter_landscape_video_camera:
+    path: ../flutter_landscape_video_camera
+```
+
+Then run:
+
+```
+flutter pub get
+```
+
+---
+
+## 🎬 Preview
 
 
 
-------------------------
+---
 
-## 🎬 Feature Preview
-'''
-📱 Landscape Camera Screen
-🔴 Recording Timer
-🔍 Pinch to Zoom
-⚡ Flash Toggle
-🔄 Switch Camera
-📂 Video File Callback
-🔐 Permission Handling
-🧱 Clean Architecture
-'''
+## 🗂 File Structure
 
------------
-
-## 📁 File Structure
-'''
-lib/
+```
+flutter_landscape_video_camera/
 │
-├── src/
-│   ├── controller/
-│   │     └── landscape_camera_controller.dart
+├─ lib/
+│   ├─ flutter_landscape_video_camera.dart
+│   │   // Main export file (used by other apps)
 │   │
-│   ├── utils/
-│   │     ├── camera_permissions.dart
-│   │     ├── orientation_helper.dart
-│   │     └── timer_helper.dart
+│   ├─ src/
+│   │     ├─ controller/
+│   │     │    └─ landscape_camera_controller.dart
+│   │     │        // Handles camera initialization, recording, zoom & flash
+│   │     │
+│   │     ├─ utils/
+│   │     │    ├─ camera_permissions.dart
+│   │     │    │    // Requests camera & microphone permission
+│   │     │    │
+│   │     │    ├─ orientation_helper.dart
+│   │     │    │    // Locks screen orientation to landscape
+│   │     │    │
+│   │     │    └─ timer_helper.dart
+│   │     │         // Formats recording duration timer
+│   │     │
+│   │     └─ widgets/
+│   │          ├─ landscape_camera_screen.dart
+│   │          │    // Main full screen camera UI
+│   │          │
+│   │          ├─ record_button.dart
+│   │          │    // Recording start/stop button
+│   │          │
+│   │          └─ round_icon_button.dart
+│   │               // Camera switch & flash buttons
 │   │
-│   └── widgets/
-│         ├── landscape_camera_screen.dart
-│         ├── record_button.dart
-│         └── round_icon_button.dart
+│   └─ main.dart
+│        // Example demo app using the library
 │
-└── flutter_landscape_video_camera.dart
-'''
+├─ README.md
+│   // Package documentation
+│
+├─ LICENSE
+│   // MIT License
+│
+└─ pubspec.yaml
+    // Package metadata and dependencies
+```
 
--------------------
+---
 
-## 📦 How to Use in Another Project
+## 🚀 How To Use
 
-1️⃣ Add Dependency
+1️⃣ Import package
 
-If using locally:
-'''
-flutter_landscape_video_camera:
-path: ../flutter_landscape_video_camera
-'''
-
-------------------
-
- 2️⃣ Import Library
-'''
+```
 import 'package:flutter_landscape_video_camera/flutter_landscape_video_camera.dart';
-'''
+```
 
-------------
+2️⃣ Open Camera Screen
 
-3️⃣ Open Camera Screen
-'''
+```
 Navigator.push(
-context,
-MaterialPageRoute(
-builder: (_) => const LandscapeCameraScreen(),
-),
+  context,
+  MaterialPageRoute(
+    builder: (_) => const LandscapeCameraScreen(),
+  ),
 );
-'''
+```
 
--------------------
+3️⃣ Receive Recorded Video Path
 
-## 🏠 How to Use in main.dart
-'''
-void main() {
-runApp(const MyApp());
+```
+controller.onVideoRecorded = (path) {
+  print("Video saved at: $path");
+};
+```
+
+---
+
+## 🏠 Full Example
+
+```
+import 'package:flutter/material.dart';
+import 'package:flutter_landscape_video_camera/flutter_landscape_video_camera.dart';
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Camera Demo')),
+      body: Center(
+        child: ElevatedButton(
+          child: const Text("Open Camera"),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => const LandscapeCameraScreen(),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
 }
+```
 
-class MyApp extends StatelessWidget {
-const MyApp({super.key});
+---
 
-@override
-Widget build(BuildContext context) {
-return const MaterialApp(
-debugShowCheckedModeBanner: false,
-home: LandscapeCameraScreen(),
-);
-}
-}
-'''
+## 🧾 Controller Properties
 
---------------------
-
-## ⚙️ Properties
-'''
 | Property        | Type                  | Description                      |
 | --------------- | --------------------- | -------------------------------- |
 | onVideoRecorded | Function(String path) | Returns recorded video file path |
 | isRecording     | bool                  | Recording state                  |
 | zoomLevel       | double                | Current zoom level               |
 | recordSeconds   | int                   | Recording duration               |
-'''
 
--------------------
+---
 
-## 📜 MIT License
-'''
+## 📄 MIT LICENSE
+
+```
 MIT License
+
+Copyright (c) 2026
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files to deal in the Software
 without restriction.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
-'''
-
--------------------
-
-
+```
