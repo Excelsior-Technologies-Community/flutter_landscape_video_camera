@@ -45,7 +45,7 @@ flutter pub get
 ## 🎬 Preview
 
 ```
-file:///D:/Documents/Documents/Downloads/lansscape_video_camera.mp4
+file:///D:/excelsior_technologies/Internship/March_2026/outputs/lansscape_video_camera.mp4
 
 ```
 ------------------
