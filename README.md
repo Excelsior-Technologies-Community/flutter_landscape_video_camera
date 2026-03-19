@@ -44,10 +44,8 @@ flutter pub get
 
 ## 🎬 Preview
 
-```
-file:///D:/excelsior_technologies/Internship/March_2026/outputs/lansscape_video_camera.mp4
+https://github.com/user-attachments/assets/0b137a85-1d31-4fe8-9b53-f078d66300ca
 
-```
 ------------------
 
 ## 🗂 File Structure
